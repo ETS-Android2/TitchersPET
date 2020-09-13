@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NovoAluno">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/back_icon"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="voltar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Novo aluno"
+        android:textColor="#0053b3"
+        android:textAlignment="center"
+        android:id="@+id/nome_titulo"
+        android:layout_marginTop="10dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/nome_titulo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nome">
+
+        <ImageButton
+            android:id="@+id/imagem"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="21dp"
+            android:background="@drawable/botao_adicionar"
+            android:src="@drawable/image_icon_drawable"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="obterImagem" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/nome"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="22dp"
+        android:hint="nome"
+        android:textStyle="italic"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:backgroundTint="#0053b3"
+        app:layout_constraintTop_toBottomOf="@+id/linear"
+        app:layout_constraintBottom_toTopOf="@+id/idade"/>
+
+    <Spinner
+        android:id="@+id/idade"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        app:layout_constraintBottom_toTopOf="@+id/alergias"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/alergias"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="22dp"
+        android:hint="alergias"
+        android:textStyle="italic"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:backgroundTint="#0053b3"
+        app:layout_constraintTop_toBottomOf="@+id/idade"
+        app:layout_constraintBottom_toTopOf="@+id/telemovel"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/telemovel"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="22dp"
+        android:hint="telemóvel"
+        android:inputType="number"
+        android:textStyle="italic"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:backgroundTint="#0053b3"
+        app:layout_constraintTop_toBottomOf="@+id/alergias"
+        app:layout_constraintBottom_toTopOf="@+id/email"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/email"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="22dp"
+        android:hint="email"
+        android:textStyle="italic"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:backgroundTint="#0053b3"
+        app:layout_constraintTop_toBottomOf="@+id/telemovel"
+        app:layout_constraintBottom_toTopOf="@+id/guardar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:textAlignment="center"
+        android:id="@+id/guardar"
+        android:textSize="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="#0053b3"
+        android:onClick="guardar"
+        android:textStyle="normal"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

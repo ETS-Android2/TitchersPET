@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".Sumario">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sumario">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/back_icon"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="voltar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sumário"
+        android:textColor="#0053b3"
+        android:textAlignment="center"
+        android:id="@+id/nome"
+        android:layout_marginTop="10dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assinale os alunos que faltaram"
+        android:textAlignment="center"
+        android:id="@+id/faltas"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/scroll"
+        android:fadeScrollbars="false"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/faltas"
+        app:layout_constraintBottom_toTopOf="@+id/sumario">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_check">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:minHeight="100dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/sumario"
+        android:hint="Sumário"
+        android:backgroundTint="#0053b3"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:textStyle="normal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guardar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:textAlignment="center"
+        android:id="@+id/guardar"
+        android:layout_marginTop="7dp"
+        android:textSize="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="#0053b3"
+        android:onClick="guardar"
+        android:textStyle="normal"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

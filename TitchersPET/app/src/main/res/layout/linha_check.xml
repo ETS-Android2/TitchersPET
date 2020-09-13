@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/secundario"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linear1"
+    android:orientation="horizontal">
+
+        <CheckBox android:id="@+id/check1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:buttonTint="#0053b3"
+            android:paddingLeft="10dp"
+            android:text="Manuel Joaquim Gerónimo"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:text="Manuel Joaquim Gerónimo"
+            android:textSize="0.1dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0"
+            android:scaleType="centerCrop"
+            android:drawableTop="@drawable/i_icon_drawable"
+            android:onClick="infoAluno"
+            android:background="?attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:id="@+id/image1" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

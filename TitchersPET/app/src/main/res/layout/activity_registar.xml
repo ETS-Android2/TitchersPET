@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Registar">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/registar_capa"
+            android:id="@+id/capa"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sombra"
+            android:id="@+id/sombra"
+            app:layout_constraintBottom_toBottomOf="@+id/capa"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sombra"
+            android:id="@+id/sombra2"
+            app:layout_constraintBottom_toBottomOf="@+id/capa"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:id="@+id/login"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/capa" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/nome_texto"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textSize="25dp"
+            android:hint="nome"
+            android:textStyle="italic"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:backgroundTint="#0053b3"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintBottom_toTopOf="@+id/turma"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/turma"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textSize="25dp"
+            android:hint="turma"
+            android:textStyle="italic"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:backgroundTint="#0053b3"
+            app:layout_constraintTop_toBottomOf="@+id/nome_texto"
+            app:layout_constraintBottom_toTopOf="@+id/pass_texto"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/pass_texto"
+            android:inputType="textPassword"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textSize="25dp"
+            android:hint="password"
+            android:textStyle="italic"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:backgroundTint="#0053b3"
+            app:layout_constraintTop_toBottomOf="@+id/turma"
+            app:layout_constraintBottom_toTopOf="@+id/pass_texto2"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/pass_texto2"
+            android:inputType="textPassword"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textSize="25dp"
+            android:hint="confirmar password"
+            android:textStyle="italic"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:backgroundTint="#0053b3"
+            app:layout_constraintTop_toBottomOf="@+id/pass_texto"
+            app:layout_constraintBottom_toTopOf="@+id/botao_registar"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/botao_registar"
+            android:text="REGISTAR"
+            android:textSize="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#0053b3"
+            android:textStyle="normal"
+            android:layout_marginBottom="25dp"
+            android:onClick="registar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

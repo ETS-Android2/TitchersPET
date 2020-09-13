@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dokas.titcherspetadmin">
+    <permission android:name="com.example.dokas.perm-provider"
+        android:label="Permissão para acesso à Base de Dados TitchersPet"
+        android:description="@string/app_name"
+        android:protectionLevel="normal"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo_admin"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_logo_admin"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Login" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider android:name="provedor"
+            android:authorities="com.example.dokas.titcherspetadmin.provedor"
+            android:grantUriPermissions="true"
+            android:exported="true"
+            android:readPermission="com.example.dokas.perm-provider"
+            android:enabled="true"
+            android:multiprocess="true"/>
+        <activity android:name=".Menu" android:screenOrientation="portrait"/>
+        <activity android:name=".pedidos" android:screenOrientation="portrait"/>
+        <activity android:name=".utilizadores" android:screenOrientation="portrait"/>
+        <activity android:name=".estatisticas" android:screenOrientation="portrait"/>
+        <activity android:name=".infoUt" android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

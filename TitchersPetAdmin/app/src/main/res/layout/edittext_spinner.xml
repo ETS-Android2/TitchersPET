@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/linear1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome e idade"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="#0053b3"
+        android:textStyle="bold"
+        android:id="@+id/nome_idade"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/edit1"
+        android:textSize="22dp"
+        android:hint="nome"
+        android:textStyle="italic"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:backgroundTint="#0053b3"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/edit2"
+        android:textSize="22dp"
+        android:hint="nome"
+        android:textStyle="italic"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:backgroundTint="#0053b3"/>
+
+    <Spinner
+        android:id="@+id/spin"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"/>
+
+</LinearLayout>

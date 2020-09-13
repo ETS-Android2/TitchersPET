@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Formulario">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/back_icon"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="voltar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formulário"
+        android:textColor="#0053b3"
+        android:textAlignment="center"
+        android:id="@+id/formulario"
+        android:layout_marginTop="10dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nome"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manuel Joaquim Gerónimo"
+        android:textAlignment="center"
+        android:id="@+id/nome"
+        android:layout_marginTop="10dp"
+        android:textSize="23dp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/formulario"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assinale os campos adequados"
+        android:textAlignment="center"
+        android:id="@+id/dia"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/nome"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/layout_check"
+        app:layout_constraintTop_toBottomOf="@+id/dia">
+
+        <CheckBox android:id="@+id/comeu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:buttonTint="#0053b3"
+            android:paddingLeft="10dp"
+            android:text="Comeu bem"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+        <CheckBox android:id="@+id/dormiu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#0053b3"
+            android:paddingLeft="10dp"
+            android:text="Dormiu bem"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+        <CheckBox android:id="@+id/coco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#0053b3"
+            android:paddingLeft="10dp"
+            android:text="Fez cocó"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+        <CheckBox android:id="@+id/xixi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#0053b3"
+            android:paddingLeft="10dp"
+            android:text="Fez xixi"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+        <CheckBox android:id="@+id/magoou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#0053b3"
+            android:paddingLeft="10dp"
+            android:text="Magoou-se"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+        <CheckBox android:id="@+id/chorou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#0053b3"
+            android:paddingLeft="10dp"
+            android:text="Chorou"
+            android:textSize="22dp"
+            android:textStyle="normal"/>
+
+    </LinearLayout>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/notas"
+        android:hint="Notas"
+        android:backgroundTint="#0053b3"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:textStyle="normal"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_check"
+        app:layout_constraintBottom_toTopOf="@+id/guardar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:textAlignment="center"
+        android:id="@+id/guardar"
+        android:layout_marginTop="7dp"
+        android:textSize="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="#0053b3"
+        android:textStyle="normal"
+        android:layout_marginBottom="25dp"
+        android:onClick="guardar"
+        app:layout_constraintTop_toBottomOf="@+id/notas"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/enviar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:textAlignment="center"
+        android:id="@+id/enviar"
+        android:textSize="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="#0053b3"
+        android:textStyle="normal"
+        android:layout_marginBottom="25dp"
+        android:onClick="guardar"
+        app:layout_constraintTop_toTopOf="@+id/guardar"
+        app:layout_constraintLeft_toRightOf="@+id/guardar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

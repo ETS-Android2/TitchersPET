@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/vazio">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="Nenhum aluno no sistema"
+        android:textAlignment="center"
+        android:id="@+id/vazio_texto"
+        android:textSize="15dp"
+        android:textStyle="normal"/>
+
+</android.support.constraint.ConstraintLayout>

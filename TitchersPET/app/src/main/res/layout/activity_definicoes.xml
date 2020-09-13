@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Definicoes">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/back"
+        android:src="@drawable/back_icon"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="voltar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Definições"
+        android:textColor="#0053b3"
+        android:textAlignment="center"
+        android:id="@+id/nome"
+        android:layout_marginTop="10dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar cópias dos relatórios"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:id="@+id/definicao1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/definicao1_escolher"
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        app:layout_constraintBottom_toTopOf="@+id/capa"/>
+
+    <Switch
+        android:id="@+id/definicao1_escolher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/definicao1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/definicao1"
+        app:layout_constraintBottom_toBottomOf="@+id/definicao1"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/info_final"
+        android:id="@+id/capa"
+        app:layout_constraintTop_toBottomOf="@+id/definicao1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/info"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sombra"
+        android:id="@+id/sombra"
+        app:layout_constraintBottom_toBottomOf="@+id/capa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sombra"
+        android:id="@+id/sombra2"
+        app:layout_constraintBottom_toBottomOf="@+id/capa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/i"
+        android:id="@+id/i"
+        app:layout_constraintTop_toTopOf="@+id/capa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/capa"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capa"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvedores"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0053b3"
+        android:textAlignment="center"
+        android:id="@+id/info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/desenvolvedores"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="André Martins 37413\nLuís Pereira 37689\nTomás Jerónimo 37870\nJoão Brito 37880\nRicardo Domingos 37906"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:id="@+id/desenvolvedores"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        app:layout_constraintBottom_toTopOf="@+id/versao"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TitchersPET v1.0  |   Powered by  "
+        android:textSize="15dp"
+        android:drawableRight="@drawable/accuweather_icon"
+        android:background="?android:attr/selectableItemBackground"
+        android:textStyle="normal"
+        android:clickable="true"
+        android:onClick="accuWeather"
+        android:layout_marginBottom="15dp"
+        android:textAlignment="center"
+        android:id="@+id/versao"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
