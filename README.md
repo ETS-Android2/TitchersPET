@@ -1,2 +1,2 @@
 # TitchersPET
-Full details at www.joaobrito.net/projects/titchers_pet
+*Full details at www.joaopedrobrito.com/projects/titchers_pet.*
